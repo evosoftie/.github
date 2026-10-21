@@ -79,20 +79,15 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: Description
-      description: Describe the requested change, problem, or expected behavior.
-      placeholder: Provide enough context for another developer to reproduce or implement it.
-    validations:
-      required: true
-
-  - type: textarea
-    id: acceptance_criteria
-    attributes:
-      label: Acceptance criteria
-      description: List the conditions that must be satisfied before closing the issue.
+      label: Description and requirements
+      description: Provide the complete documentation, requirements, expected behavior, implementation notes, and relevant context.
       placeholder: |
-        - [ ] ...
-        - [ ] ...
+        Include:
+        - Background and business requirement
+        - Expected behavior
+        - Technical or Business Central details
+        - Definition of done
+        - Logs, links, screenshots, or related issues
     validations:
       required: true
 
@@ -100,7 +95,7 @@ body:
     id: additional_context
     attributes:
       label: Additional context
-      description: Add logs, links, screenshots, or related issues.
+      description: Add anything that does not fit in the main description.
       placeholder: Paste relevant details here.
 
   - type: checkboxes
