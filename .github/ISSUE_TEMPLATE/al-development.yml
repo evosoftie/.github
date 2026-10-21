@@ -1,0 +1,105 @@
+name: AL Development
+description: Create a structured Business Central AL development issue
+title: "[AL] "
+body:
+  - type: dropdown
+    id: work_type
+    attributes:
+      label: Work type
+      description: What kind of work is this?
+      options:
+        - Feature
+        - Bug
+        - Change request
+        - CI/CD or deployment
+        - AppSource validation
+        - Documentation
+        - Technical debt
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the solution is affected?
+      options:
+        - AL code
+        - Tables and permissions
+        - Pages and UI
+        - Reports
+        - Integrations
+        - CI/CD
+        - Business Central environment
+        - AppSource
+    validations:
+      required: true
+
+  - type: input
+    id: bc_version
+    attributes:
+      label: Business Central version
+      description: Enter the BC major/minor version, if relevant.
+      placeholder: "Example: 28.5"
+
+  - type: dropdown
+    id: target_environment
+    attributes:
+      label: Target environment
+      options:
+        - Development
+        - UAT or Sandbox
+        - Production
+        - AppSource
+        - Not applicable
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the requested change, problem, or expected behavior.
+      placeholder: Provide enough context for another developer to reproduce or implement it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: List the conditions that must be satisfied before closing the issue.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context
+      description: Add logs, links, screenshots, or related issues.
+      placeholder: Paste relevant details here.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Review checklist
+      options:
+        - label: I have checked for an existing issue.
+          required: true
+        - label: I have included the relevant repository and environment context.
+          required: true
