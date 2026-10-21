@@ -67,6 +67,33 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: responsible_developer
+    attributes:
+      label: Responsible developer
+      description: Enter the GitHub username of the developer responsible for implementation.
+      placeholder: "@username"
+    validations:
+      required: true
+
+  - type: input
+    id: consultant
+    attributes:
+      label: Consultant
+      description: Enter the GitHub username of the consultant coordinating communication with the client.
+      placeholder: "@username"
+    validations:
+      required: true
+
+  - type: input
+    id: tester
+    attributes:
+      label: Tester
+      description: Enter the GitHub username of the person responsible for testing and confirmation.
+      placeholder: "@username"
+    validations:
+      required: true
+
   - type: textarea
     id: description
     attributes:
